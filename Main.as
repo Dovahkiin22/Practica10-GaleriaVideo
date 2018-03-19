@@ -149,6 +149,10 @@ function materia2(timepoevent: TimerEvent) {
 				nextFrame();
 			}
 			selector.addEventListener(MouseEvent.CLICK,select);
+			function videopri(event:MouseEvent){
+				gotoAndStop(3);
+			}
+			video1.addEventListener(MouseEvent.CLICK,videopri);
 		}
 	}
 }
