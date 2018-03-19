@@ -17,9 +17,8 @@ import flash.events.MouseEvent;
 			// constructor code
 			//variables para el timer
 var tmpp: int = 0; //Tiempo 
-var timerp: Timer = new Timer(100, contp++);
+var timerp: Timer = new Timer(100);
 //Arrancar tiempo
-var contp: int; //Contador del timer
 timerp.start(); //Iniciar el timer
 timerp.addEventListener(TimerEvent.TIMER, materia1);
 //Función para el tiempo que durara y cada segundo se moestrara una letra
@@ -65,11 +64,9 @@ function materia1(timepoevent: TimerEvent) {
 		tmpp = 0;
 	}
 }
-var contp1:int=0;
 var tmpp1: int = 0; //Tiempo 
-var timerp1: Timer = new Timer(100, contp1++);
+var timerp1: Timer = new Timer(100);
 //Arrancar tiempo
-
 timerp1.start(); //Iniciar el timer
 timerp1.addEventListener(TimerEvent.TIMER, materia2);
 //Función para el tiempo que durara y cada segundo se moestrara una letra
