@@ -6,25 +6,88 @@
 	import fl.transitions.easing.*;
 	import flash.events.Event;
 	import fl.transitions.Tween;
-import fl.transitions.TweenEvent;
+	import fl.transitions.TweenEvent;
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
 	import flash.utils.getTimer;
-import flash.events.MouseEvent;
+	import flash.events.MouseEvent;
+	
 	public class Main extends MovieClip {
-
+		
+			var v:simpleFlv = new simpleFlv();
+			var tmpp: int = 0; //Tiempo 
+			var timerp: Timer = new Timer(100);
+			var tmpp1: int = 0; //Tiempo 
+			var timerp1: Timer = new Timer(100);
+			/*var inte: Tween = new Tween(integrantes, "x", Bounce.easeOut, -100, 454.3, 3, true);
+			var maest: Tween = new Tween(maestro, "x", Bounce.easeOut, -100,454.3, 3, true);
+			var nomb1: Tween = new Tween(mais1, "x", Bounce.easeOut, -100, 295.95, 4, true);
+			var nomb12: Tween = new Tween(mais2, "x", Bounce.easeOut, 1200, 532.9, 4, true);
+			var nomb2: Tween = new Tween(peal1, "x", Bounce.easeOut, -100, 295.95, 4, true);
+			var nomb22: Tween = new Tween(peal2, "x", Bounce.easeOut, 1200, 543.75, 4, true);
+			var nomb3: Tween = new Tween(paad1, "x", Bounce.easeOut, -100, 295.95, 4, true);
+			var nomb32: Tween = new Tween(paad2, "x", Bounce.easeOut, 1200, 517.85, 4, true);
+			var maes: Tween = new Tween(msim1, "x", Bounce.easeOut, -100, 286.95, 4, true);
+			var maes2: Tween = new Tween(msim2, "x", Bounce.easeOut, 1200,603.5, 4, true);
+			var log: Tween = new Tween(logo, "y", Elastic.easeOut, 900, 568, 3, true);*/
+		
 		public function Main() {
+			timerp.start(); //Iniciar el timer
+			selector.addEventListener(MouseEvent.CLICK,select);
+			timerp1.start(); //Iniciar el timer
+			stage.addEventListener(Event.ENTER_FRAME, espadat);
+
+		}
+			public function video1 (event:MouseEvent):void{
+			v.playMyFlv("Video1.mp4");
+			addChild(v);
+			}
+			public function video2 (event:MouseEvent):void{
+			v.playMyFlv("Video2.mp4");
+			addChild(v);
+			}
+			public function video3 (event:MouseEvent):void{
+			v.playMyFlv("Video3.mp4");
+			addChild(v);
+			}
+			public function video4 (event:MouseEvent):void{
+			v.playMyFlv("Video4.mp4");
+			addChild(v);
+			}
+			public function video5 (event:MouseEvent):void{
+			v.playMyFlv("Video5.mp4");
+			addChild(v);
+			}
+			public function video6 (event:MouseEvent):void{
+			v.playMyFlv("Video6.mp4");
+			addChild(v);
+			}
+			public function video7 (event:MouseEvent):void{
+			v.playMyFlv("Video7.mp4");
+			addChild(v);
+			}
+			public function video8 (event:MouseEvent):void{
+			v.playMyFlv("Video8.mp4");
+			addChild(v);
+			}
+			public function video9 (event:MouseEvent):void{
+			v.playMyFlv("Video9.mp4");
+			addChild(v);
+			}
+			public function video10 (event:MouseEvent):void{
+			v.playMyFlv("Video10.mp4");
+			addChild(v);
+			}
 			// constructor code
 			//variables para el timer
-var tmpp: int = 0; //Tiempo 
-var timerp: Timer = new Timer(100);
+
 //Arrancar tiempo
-timerp.start(); //Iniciar el timer
-timerp.addEventListener(TimerEvent.TIMER, materia1);
+
 //Función para el tiempo que durara y cada segundo se moestrara una letra
 //Se hiz un timer para mostrar cada segundo una letra con Tween
 //Hasta llegar a la ultima se vuelve a repetir los Tweens
-function materia1(timepoevent: TimerEvent) {
+public function materia1(timepoevent: TimerEvent) {
+	timerp.addEventListener(TimerEvent.TIMER, materia1);
 	tmpp++ //Se suma 1 a los segundos
 	if (tmpp == 1) {
 		var hp: Tween = new Tween(h, "y", Bounce.easeOut, 0, 92.25, 1, true);
@@ -64,15 +127,14 @@ function materia1(timepoevent: TimerEvent) {
 		tmpp = 0;
 	}
 }
-var tmpp1: int = 0; //Tiempo 
-var timerp1: Timer = new Timer(100);
+
 //Arrancar tiempo
-timerp1.start(); //Iniciar el timer
-timerp1.addEventListener(TimerEvent.TIMER, materia2);
+
 //Función para el tiempo que durara y cada segundo se moestrara una letra
 //Se hiz un timer para mostrar cada segundo una letra con Tween
 //Hasta llegar a la ultima se vuelve a repetir los Tweens
-function materia2(timepoevent: TimerEvent) {
+public function materia2(timepoevent: TimerEvent) {
+	timerp1.addEventListener(TimerEvent.TIMER, materia2);
 	tmpp1++ //Se suma 1 a los segundos
 	if (tmpp1 == 1) {
 		var hp1: Tween = new Tween(m2, "y", Bounce.easeOut, 0, 92.25, 1, true);
@@ -107,20 +169,11 @@ function materia2(timepoevent: TimerEvent) {
 	}
 }
 
-			var inte: Tween = new Tween(integrantes, "x", Bounce.easeOut, -100, 454.3, 3, true);
-			var maest: Tween = new Tween(maestro, "x", Bounce.easeOut, -100,454.3, 3, true);
-			var nomb1: Tween = new Tween(mais1, "x", Bounce.easeOut, -100, 295.95, 4, true);
-			var nomb12: Tween = new Tween(mais2, "x", Bounce.easeOut, 1200, 532.9, 4, true);
-			var nomb2: Tween = new Tween(peal1, "x", Bounce.easeOut, -100, 295.95, 4, true);
-			var nomb22: Tween = new Tween(peal2, "x", Bounce.easeOut, 1200, 543.75, 4, true);
-			var nomb3: Tween = new Tween(paad1, "x", Bounce.easeOut, -100, 295.95, 4, true);
-			var nomb32: Tween = new Tween(paad2, "x", Bounce.easeOut, 1200, 517.85, 4, true);
-			var maes: Tween = new Tween(msim1, "x", Bounce.easeOut, -100, 286.95, 4, true);
-			var maes2: Tween = new Tween(msim2, "x", Bounce.easeOut, 1200,603.5, 4, true);
+			
 			//var mat: Tween = new Tween(materia, "y", Elastic.easeOut, -100, 86.55, 3, true);
-			var log: Tween = new Tween(logo, "y", Elastic.easeOut, 900, 568, 3, true);
-			function espadat(event: Event) {
-			if (guadaña1.x == 16.75) {
+			
+		public function espadat(event: Event) {
+				if (guadaña1.x == 16.75) {
 					var gua1: Tween = new Tween(guadaña1, "x", None.easeIn, 16.75, 1302.45, 4, true);
 				}
 				if (guadaña1.x == 1302.45) {
@@ -145,15 +198,21 @@ function materia2(timepoevent: TimerEvent) {
 					var gua8: Tween = new Tween(guadaña4, "y", None.easeIn, 69.55, 621.75, 2, true);
 				}
 			}
-			stage.addEventListener(Event.ENTER_FRAME, espadat);
-			function select(event:MouseEvent){
+			
+		public function select(event:MouseEvent){
 				nextFrame();
+				stage.removeEventListener(Event.ENTER_FRAME, espadat);
+				btn1.addEventListener(MouseEvent.CLICK,video1);
+				btn2.addEventListener(MouseEvent.CLICK,video2);
+				btn3.addEventListener(MouseEvent.CLICK,video3);
+				btn4.addEventListener(MouseEvent.CLICK,video4);
+				btn5.addEventListener(MouseEvent.CLICK,video5);
+				btn6.addEventListener(MouseEvent.CLICK,video6);
+				btn7.addEventListener(MouseEvent.CLICK,video7);
+				btn8.addEventListener(MouseEvent.CLICK,video8);
+				btn9.addEventListener(MouseEvent.CLICK,video9);
+				btn10.addEventListener(MouseEvent.CLICK,video10);
 			}
-			selector.addEventListener(MouseEvent.CLICK,select);
-			function videopri(event:MouseEvent){
-				gotoAndStop(3);
-			}
-			video1.addEventListener(MouseEvent.CLICK,videopri);
+			
 		}
 	}
-}
