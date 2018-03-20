@@ -106,6 +106,7 @@ function materia2(timepoevent: TimerEvent) {
 		tmpp1 = 0;
 	}
 }
+
 			var inte: Tween = new Tween(integrantes, "x", Bounce.easeOut, -100, 454.3, 3, true);
 			var maest: Tween = new Tween(maestro, "x", Bounce.easeOut, -100,454.3, 3, true);
 			var nomb1: Tween = new Tween(mais1, "x", Bounce.easeOut, -100, 295.95, 4, true);
